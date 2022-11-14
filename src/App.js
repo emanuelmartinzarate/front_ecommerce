@@ -1,4 +1,3 @@
-
-const App = () => (<div>Hello from react</div>)
+const App = () => (<div>E-commerce</div>)
 
 export default App;

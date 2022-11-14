@@ -16,6 +16,8 @@ import Cart from './core/Cart'
 import Profile from './user/Profile'
 import ManageProducts from './admin/ManageProducts'
 import UpdateProduct from './admin/UpdateProduct'
+import Chat from './user/Chat'
+
 
 const Routing = () =>{
     return (
@@ -35,6 +37,7 @@ const Routing = () =>{
             <Route path='/product/:productId' exact component={Product}/>
             <Route path='/cart' exact component={Cart}/>
             <PrivateRoute path='/profile/:userId' exact component={Profile}/>
+            <PrivateRoute path='/chat' exact component={Chat}/>
         </Switch>
     </BrowserRouter>)
 }
