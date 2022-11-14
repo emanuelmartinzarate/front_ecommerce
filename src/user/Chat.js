@@ -2,8 +2,9 @@ import { useState } from 'react'
 import Layout from '../core/Layout'
 import io from 'socket.io-client'
 import Room from './Room'
+import { CHAT } from '../config'
 
-const socket = io.connect('http://localhost:8000')
+const socket = io.connect(`${CHAT}`)
 
 const Chat = () => {
     const [username, setUsername] = useState("")
