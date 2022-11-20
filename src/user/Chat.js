@@ -4,7 +4,9 @@ import io from 'socket.io-client'
 import Room from './Room'
 import { CHAT } from '../config'
 
-const socket = io.connect(`${CHAT}`)
+const socket = io(CHAT,{
+    path: '/socketchat/'
+})
 
 const Chat = () => {
     const [username, setUsername] = useState("")
